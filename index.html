@@ -25,14 +25,23 @@
 
 <script src="https://releases.ijewel3d.com/libs/mini-viewer/0.1.0/bundle.iife.js"></script>
 <script type="text/javascript">
-	const model = "scene2.glb";
+	
+const model = "/scene2.glb";
 
-new ijewelViewer.Viewer(document.getElementById("viewer-root")
-  ,{modelUrl : model} //project
-  ,{showCard:false}
-  ,{splitMaterialTabs: false}
-  ,{showSwitchNode: true}
-  ,{showLogo: false}
+const basePath = "https://canstd.github.io";
+
+ijewelViewer.setupIjewelDriveViewer(
+  {
+    basePath: basePath,
+    model: model,
+    ijewelViewerOptions: {
+      showCard: false,
+      splitMaterialTabs: false,
+      showSwitchNode: true,
+      showLogo: false
+    }
+  },
+  document.getElementById("viewer-root")
 );
 
 window.addEventListener("webgi-viewer-ready", async (ev) => {
