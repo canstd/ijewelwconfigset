@@ -1,0 +1,106 @@
+{
+  "Background": {
+    "basePath": "presets/background",
+    "assets": [
+      "gradient-radial-dark-blue.svg",
+      "gradient-radial-grey.svg",
+      "gradient-radial-red.svg",
+      "gradient-radial-aqua.svg",
+      "gradient-radial-green.svg",
+      "gradient-radial-white.svg",
+      "gradient-radial-coral.svg",
+      "gradient-radial-fuchsia.svg",
+      "gradient-radial-blue.svg",
+      "gradient-radial-black.svg",
+      "gradient-radial-light-blue.svg",
+      "gradient-radial-gray.svg",
+      "gradient-radial-beige.svg",
+      "gradient-radial-antrasit.svg",
+      "gradient-linear-light-blue.svg",
+      "gradient-linear-gray.svg",
+      "gradient-linear-beige.svg",
+      "gradient-linear-antrasit.svg"
+    ]
+  },
+  "Environment": {
+    "basePath": "presets/environment",
+    "assets": [
+      "env-metal-1.hdr;.png",
+      "env-metal-2.hdr;.png",
+      "env-metal-3.hdr;.png",
+      "env-metal-4.hdr;.png",
+      "env-metal-5.hdr;.png",
+      "env-metal-6.hdr;.png",
+      "env-metal-7.hdr;.png",
+      "env-metal-8.hdr;.png",
+      "env-metal-9.hdr;.png",
+      "env-metal-10.hdr;.png",
+      "env-metal-11.hdr;.png",
+      "env-metal-12.hdr;.png",
+      "env-metal-13.hdr;.png",
+      "env-metal-gem-1.hdr;.png",
+      "env-metal-gem-2.hdr;.png",
+      "env-gem-1.hdr;.png",
+      "env-gem-2.hdr;.png"
+    ]
+  },
+  "GemEnvironment": {
+    "basePath": "presets/environment",
+    "assets": [
+      "None;.png",
+      "env-gem-1.hdr;.png",
+      "env-gem-2.hdr;.png",
+      "env-gem-3.exr;.png",
+      "env-gem-4.exr;.png",
+      "env-gem-5.exr;.png",
+      "env-gem-6.exr;.png"
+    ]
+  },
+  "Ground": {
+    "basePath": "presets/ground",
+    "assets": [
+      "shadow_reflection.json;.png",
+      "softshadow_backleft.json;.png",
+      "softshadow_backleft1.json;.png",
+      "softshadow_backright.json;.png",
+      "softshadow_backright1.json;.png",
+      "softshadow_frontleft.json;.png",
+      "softshadow_frontleft1.json;.png",
+      "softshadow_frontright.json;.png",
+      "softshadow_frontright1.json;.png",
+      "ssrreflection.json;.png",
+      "uniformshadow_top.json;.png",
+      "uniformshadow_top1.json;.png",
+      "No shadow.json;.png"
+    ]
+  },
+  "CameraViews": {
+    "basePath": "presets/views",
+    "assets": ["views-1.json", "views-2.json"]
+  },
+  "VJSON": {
+    "basePath": "presets/vjson",
+    "assets": [
+      "ss-001.vjson;.png",
+      "ss-002.vjson;.png",
+      "ss-003.vjson;.png",
+      "ss-004.vjson;.png",
+      "ss-005.vjson;.png",
+      "ss-006.vjson;.png",
+      "ss-007.vjson;.png",
+      "ss-008.vjson;.png",
+      "ss-009.vjson;.png",
+      "ss-010.vjson;.png",
+      "ss-011.vjson;.png",
+      "ss-012.vjson;.png",
+      "ss-013.vjson;.png",
+      "ss-014.vjson;.png",
+      "ss-015.vjson;.png",
+      "ss-016.vjson;.png",
+      "ss-017.vjson;.png",
+      "ss-018.vjson;.png",
+      "ss-019.vjson;.png",
+      "ss-020.vjson;.png"
+    ]
+  }
+}
