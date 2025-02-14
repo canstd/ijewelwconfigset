@@ -25,11 +25,14 @@
 
 <script src="https://releases.ijewel3d.com/libs/mini-viewer/0.1.0/bundle.iife.js"></script>
 <script type="text/javascript">
-	const model = "scene.glb";
+	const model = "https://demo-assets.pixotronics.com/pixo/gltf/jewlr1.glb";
 
 new ijewelViewer.Viewer(document.getElementById("viewer-root")
   ,{modelUrl : model} //project
-  ,{showCard:false} // viewer options
+  ,{showCard:false}
+  ,{splitMaterialTabs: false}
+  ,{showSwitchNode: true}
+  ,{showLogo: false}
 );
 
 window.addEventListener("webgi-viewer-ready", async (ev) => {
