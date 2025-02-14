@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<style type="text/css">
-		#viewer-root {
-  width: 100%;
-  height: 100%;
-}
-#viewer-wrapper {
-  width: 100vw;
-  height: 100vh;
-  display:flex;
-  overflow: hidden;
-  position:relative;
-}
-
-	</style>
-<title>Page Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Model Viewer with Layers</title>
+  <style type="text/css">
+    #viewer-root {
+      width: 100%;
+      height: 100%;
+    }
+    #viewer-wrapper {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+  </style>
 </head>
 <body>
 
@@ -25,21 +26,31 @@
 
 <script src="https://releases.ijewel3d.com/libs/mini-viewer/0.1.0/bundle.iife.js"></script>
 <script type="text/javascript">
-	const model = "scene.glb";
+  const model = "scene.glb";
 
-new ijewelViewer.Viewer(document.getElementById("viewer-root")
-  ,{modelUrl : model} //project
-  ,{showCard:true}
-  ,{splitMaterialTabs: true}
-  ,{showSwitchNode: true}
-  ,{showLogo: false}
-);
+  new ijewelViewer.Viewer(document.getElementById("viewer-root"), {
+    modelUrl: model, // Load the 3D model
+    showCard: true, // Show the information card
+    splitMaterialTabs: true, // Split material tabs for better interaction
+    showSwitchNode: true, // Enable layer/node switching
+    showLogo: false, // Hide the logo (optional)
+    showLayers: true, // Show the layers of the 3D object (if supported by the viewer)
+  });
 
-window.addEventListener("webgi-viewer-ready", async (ev) => {
-  console.log("ready");
-  const viewer = ev.detail.viewer;
-});
+  window.addEventListener("webgi-viewer-ready", async (ev) => {
+    console.log("Viewer is ready");
+    const viewer = ev.detail.viewer;
 
+    // Assuming the viewer has a way to access the layers or nodes, you can use the viewer API to list them.
+    const layers = await viewer.getLayers(); // Example of getting layers (check the viewer API for exact methods)
+    console.log(layers); // List all layers in the console for debugging
+
+    // Optionally, you can allow toggling of layers or show information about them
+    layers.forEach(layer => {
+      console.log(`Layer: ${layer.name}`); // Print the name of each layer in the model
+      // Add your logic to enable/disable layer visibility or provide user controls for interacting with layers
+    });
+  });
 </script>
 
 </body>
