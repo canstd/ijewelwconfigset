@@ -10,28 +10,19 @@
 <script src='https://releases.ijewel3d.com/libs/mini-viewer/0.1.0/bundle.iife.js'></script>
 <script >
   // set this to true during development to bypass CORS.
-  const useProxy = true; 
-  const baseName = 'demodrive';
 
-  const basePath = "https://assets." + baseName + ".ijewel3d.com";
-   
-  const proxyUrl = useProxy ? "https://cors-proxy.r2cache.com/" : "";
-  ijewelViewer.initializeIJewel3DViewer({
-    basePath: proxyUrl + basePath,
-    ijewelViewerOptions: {
-      showCard: false,
-      showLogo: true,
-    },
-  });
+const model = "https://demo-assets.pixotronics.com/pixo/gltf/jewlr1.glb";
 
-  window.addEventListener('webgi-viewer-ready', async (ev)=>{
-    console.log("ready")
-    const viewer = ev.detail.viewer;
-  
-    //to set the quality 
-    viewer.renderer.displayCanvasScaling = Math.min(2, window.devicePixelRatio)
+new ijewelViewer.Viewer(document.getElementById("viewer-root")
+  ,{modelUrl : model} //project
+  ,{showCard:false} // viewer options
+);
 
-  });
+window.addEventListener("webgi-viewer-ready", async (ev) => {
+  console.log("ready");
+  const viewer = ev.detail.viewer;
+});
+
 
 </script>
 <style>
