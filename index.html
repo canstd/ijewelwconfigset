@@ -23,25 +23,16 @@
   <div id="viewer-root"></div>
 </div>
 
-<script src="https://releases.ijewel3d.com/libs/mini-viewer/0.2.0/bundle.iife.js"></script>
+<script src="https://releases.ijewel3d.com/libs/mini-viewer/0.1.0/bundle.iife.js"></script>
 <script type="text/javascript">
-	
-const model = "/canstd/ijewelwconfigset/raw/refs/heads/main/scene2.glb";
+	const model = "scene.glb";
 
-const basePath = "https://github.com";
-
-ijewelViewer.setupIjewelDriveViewer(
-  {
-    basePath: basePath,
-    model: model,
-    ijewelViewerOptions: {
-      showCard: false,
-      splitMaterialTabs: false,
-      showSwitchNode: true,
-      showLogo: false
-    }
-  },
-  document.getElementById("viewer-root")
+new ijewelViewer.Viewer(document.getElementById("viewer-root")
+  ,{modelUrl : model} //project
+  ,{showCard:false}
+  ,{splitMaterialTabs: false}
+  ,{showSwitchNode: true}
+  ,{showLogo: false}
 );
 
 window.addEventListener("webgi-viewer-ready", async (ev) => {
