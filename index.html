@@ -40,16 +40,6 @@
   window.addEventListener("webgi-viewer-ready", async (ev) => {
     console.log("Viewer is ready");
     const viewer = ev.detail.viewer;
-
-    // Assuming the viewer has a way to access the layers or nodes, you can use the viewer API to list them.
-    const layers = await viewer.getLayers(); // Example of getting layers (check the viewer API for exact methods)
-    console.log(layers); // List all layers in the console for debugging
-
-    // Optionally, you can allow toggling of layers or show information about them
-    layers.forEach(layer => {
-      console.log(`Layer: ${layer.name}`); // Print the name of each layer in the model
-      // Add your logic to enable/disable layer visibility or provide user controls for interacting with layers
-    });
   });
 </script>
 
