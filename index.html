@@ -24,12 +24,11 @@
   <div id="viewer-root"></div>
 </div>
 
-<!--<script src="https://releases.ijewel3d.com/libs/mini-viewer/0.1.0/bundle.iife.js"></script>-->
-<script src="https://releases.ijewel3d.com/libs/mini-viewer/0.2.0/bundle.iife.js"></script>
+<script src="https://releases.ijewel3d.com/libs/mini-viewer/0.1.0/bundle.iife.js"></script>
   
 <script type="text/javascript">
-  const model = "/raw/refs/heads/main/scene2.glb";
-  /*
+  const model = "scene2.glb";
+  
   new ijewelViewer.Viewer(document.getElementById("viewer-root"), {
     modelUrl: model, // Load the 3D model
     showCard: true, // Show the information card
@@ -37,23 +36,7 @@
     showSwitchNode: true, // Enable layer/node switching
     showLogo: false, // Hide the logo (optional)
     showLayers: true, // Show the layers of the 3D object (if supported by the viewer)
-  });
-  */
-
-  const basePath = "https://github.com/canstd/ijewelwconfigset";
-  ijewelViewer.setupIjewelDriveViewer(
-    {
-      basePath: basePath,
-      model: model,
-      ijewelViewerOptions: {
-        showCard: false,
-        splitMaterialTabs: false,
-        showSwitchNode: true,
-        showLogo: false
-      }
-    },
-    document.getElementById("viewer-root")
-  );
+  }
   
   window.addEventListener("webgi-viewer-ready", async (ev) => {
     console.log("Viewer is ready");
